@@ -27,6 +27,7 @@ export const buildLoaders = (options: BuildOptions): webpack.Configuration["modu
         options: {
             modules: {
                 localIdentName: isDev ? '[path][name]__[local]--[hash:base64:8]' : '[hash:base64:8]',
+                namedExport: false // Для того, чтобы указывать `import cls`, а не `import * as cls`
             },
         }
     }
